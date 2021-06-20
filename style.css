@@ -1,0 +1,78 @@
+:root {
+  --secondaryBackground: rgb(0, 95, 112);
+  --secondaryColor: aliceblue;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(89, 205, 218, 0.3);
+}
+body .content {
+  width: 80%;
+  /*! ================================== */
+}
+body .content #userInput, body .content .display {
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 6px;
+}
+body .content #userInput {
+  box-sizing: border-box;
+  height: 50px;
+  background-color: var(--secondaryBackground);
+  color: var(--secondaryColor);
+  font-size: larger;
+  padding-left: 30px;
+  margin-bottom: 30px;
+}
+body .content .display {
+  height: 200px;
+  background-color: #a5ebe5;
+  font-size: 2em;
+}
+body .content .spoty-card-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+body .content .spoty-card-list .spoty-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--secondaryBackground);
+  color: aliceblue;
+  padding: 20px;
+  border-radius: 8px;
+}
+body .content .spoty-card-list .spoty-card * {
+  width: 100%;
+}
+body .content .spoty-card-list .spoty-card:hover {
+  background-color: #05161d;
+  opacity: 0.8;
+}
+body .content .spoty-card-list .spoty-card:hover .card-top audio {
+  opacity: 0.7;
+}
+body .content .spoty-card-list .spoty-card .card-top {
+  display: grid;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+body .content .spoty-card-list .spoty-card .card-top img, body .content .spoty-card-list .spoty-card .card-top audio {
+  width: 100%;
+  grid-row: 1/2;
+  grid-column: 1/2;
+  margin-top: 0;
+  border-radius: 12px;
+}
+body .content .spoty-card-list .spoty-card .card-top audio {
+  margin-top: auto;
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+body .content .spoty-card-list .spoty-card .card-top audio source {
+  background-color: #000;
+}/*# sourceMappingURL=style.css.map */

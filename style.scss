@@ -1,0 +1,93 @@
+:root {
+    --secondaryBackground: rgb(0, 95, 112);
+    --secondaryColor     : aliceblue;
+}
+
+body {
+    display: flex ;
+    justify-content: center;
+    background-color: rgb(89, 205, 218, 0.3);
+
+    .content {
+        width: 80%;
+    
+
+    #userInput, .display {
+        width        : 100%;
+        border       : 1px solid #000;
+        border-radius: 6px;
+    }
+
+    #userInput {
+        box-sizing      : border-box;
+        height          : 50px;
+        background-color: var(--secondaryBackground);
+        color           : var(--secondaryColor);
+        font-size       : larger;
+        padding-left    : 30px;
+        margin-bottom   : 30px;
+    }
+    .display {
+        height: 200px;
+        background-color: rgb(165, 235, 229);
+        font-size: 2em;
+    }
+    /*! ================================== */
+    
+    .spoty-card-list {
+        display: grid;
+        grid-template-columns: repeat( 5, 1fr);
+        gap: 10px;
+        
+        .spoty-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: var( --secondaryBackground );
+            color: aliceblue;
+            padding: 20px;
+            border-radius: 8px;
+            * {
+                width:  100%;
+            }
+            &:hover {
+                background-color: #05161d;
+                opacity: .8;
+                .card-top {
+                    audio {
+                        opacity: .7;
+                    }
+                }
+            }
+            .card-top {
+                display: grid;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 100%;
+                img, audio {
+                    width: 100%;
+                    grid-row: 1 / 2;
+                    grid-column: 1 / 2;
+                    margin-top: 0;
+                    border-radius: 12px;
+
+                }
+                audio {
+                    margin-top: auto;
+                    opacity: 0;
+                    transition: opacity .7s;
+                    source {
+                        background-color: #000;
+                    }
+                }
+            }
+            
+            
+            
+            
+            
+            
+            
+        }   
+    }
+}}
